@@ -19,7 +19,9 @@ Reproducibility is an integral part of high-quality research, and this is the ca
 - How to collaborate effectively, and disseminate code & other documents using Github
 
 ### Lessons
-**[Click here](schedule) for links to lessons and the suggested schedule**
+
+- [Workshop schedule (trainer-led learning)](schedule)
+- [Self-learning](schedule/links-to-lessons.md)
 
 ### Preparation Requirements
 #### GitHub Desktop
