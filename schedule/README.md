@@ -62,7 +62,7 @@
 -   [knitr examples](https://yihui.name/knitr/demos)
 -   [knitr vignettes](https://github.com/yihui/knitr/tree/master/vignettes)
 
-### GitHub and GitKraken
+### GitHub
 * [Git on the command line](https://hbctraining.github.io/Training-modules/Git-Github/#learning-objectives)
 * The [Getting Started with GitHub Desktop](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop) is a great way to start exploring it's functionality, and learning more about what Git can do.
 * GitHub also provides extensive support in the form of [guides](https://guides.github.com/) and [help](https://help.github.com/).
