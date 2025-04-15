@@ -74,7 +74,7 @@ Download the folder we have generated for this session [from here](https://githu
 
 There are a number of different ways to add files/folders for Git/GitHub Desktop to track...
 
-**Method 1: In GitHub Desktop, on the `Let's get started!` screen, click `+ Crete a new repository on your Local Drive...`**
+**Method 1: In GitHub Desktop, on the `Let's get started!` screen, click `+ Create a new repository on your Local Drive...`**
 
 **Method 2:** In GitHub Desktop, if you are already past the `Let's get started!` screen, click `Current repository` in the lefthand side of the repository bar, then in the dropdown menu that appears, click `Add` and select `Create New Repository...`
 
@@ -381,6 +381,6 @@ Go to <a href="https://github.com">GitHub</a> and left-click your profile pictur
 
 ***
 
-* Materials used in these lessons are derived from Daniel van Strien's ["An Introduction to Version Control Using GitHub Desktop,"](http://programminghistorian.org/lessons/getting-started-with-github-desktop), Programming Historian, (17 June 2016). [The Programming Historian ISSN 2397-2068](http://programminghistorian.org/), is released under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
+*Materials used in these lessons are derived from Daniel van Strien's ["An Introduction to Version Control Using GitHub Desktop,"](http://programminghistorian.org/lessons/getting-started-with-github-desktop), Programming Historian, (17 June 2016). [The Programming Historian ISSN 2397-2068](http://programminghistorian.org/), is released under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
 
-* Materials are also derived from [Software Carpentry instructional material](https://swcarpentry.github.io/git-novice/). These materials are also licensed under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
+*Materials are also derived from [Software Carpentry instructional material](https://swcarpentry.github.io/git-novice/). These materials are also licensed under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0).*
