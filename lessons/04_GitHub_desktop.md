@@ -12,7 +12,7 @@ author: "Meeta Mistry, Heather Wick"
 
 ## Getting Started with Git using a GUI (Graphical User Interface)
 
-Long-time users of Git often use the command-line user interface (CLI), i.e. a Terminal. However, there are several tools that enable novices to use Git with a Graphical User Interface (GUI) (point-and-click) interface. Two examples of GUIs for Git are [GitHub Desktop](https://desktop.github.com/) and [GitKraken](https://www.gitkraken.com). We will be using the former.
+Long-time users of Git often use the command-line user interface (CLI), i.e. a Terminal. However, there are several tools that enable novices to use Git with a Graphical User Interface (GUI) (point-and-click interface). Two examples of GUIs for Git are [GitHub Desktop](https://desktop.github.com/) and [GitKraken](https://www.gitkraken.com). We will be using the former.
 
 Although there are several advantages to using Git from the command-line interface in the long run, a GUI is a great place to start with learning the basics. 
 
@@ -134,11 +134,9 @@ Your GitHub Desktop screen should now look like this:
 
 ### Committing Changes
 
-Before we continue, we want to highlight a few research data management best practices: organize your files, structure your folder and name files consistently. We recommend having separate folders for `code` (or `scripts`), `data`, `docs`, `figures`, and `other` to keep your data organized.
+Before we continue, we want to highlight a few research data management best practices: organize your files, structure your folder and name files consistently. We recommend having separate folders for `code` (or `scripts`), `data`, `docs`, `figures`, and `other` to keep your data organized. 
 
-You can make folders in your local git repository just as you normally would in your file browser, such as by right clicking and selecting `New Folder` from the drop down menu. 
-
-For this workshop, we will add folders (and some files) to our repository. In order to do download the examples that we will be working from, right-click [this link](https://github.com/hbctraining/reproducibility-tools/raw/master/data/githubdesktop_workshop_materials.zip) and select "**Save File As...**" or "**Download Linked File As..**" from the dropdown menu. This should download a zip-compressed (`.zip` file) of the directory that we will be using. You can double-click on the `githubdesktop_workshop_materials.zip` file to uncompress it. Once this has directory has been uncompressed, move the individual folders within this folder into your GitHub Desktop repository within your file browser.
+For this workshop, we will add folders (and some files) to our repository. In order to do this, download the examples that we will be working from by right-clicking [this link](https://github.com/hbctraining/reproducibility-tools/raw/master/data/githubdesktop_workshop_materials.zip) and selecting "**Save File As...**" or "**Download Linked File As..**" from the dropdown menu. This should download a zip-compressed (`.zip` file) of the directory that we will be using. You can double-click on the `githubdesktop_workshop_materials.zip` file to uncompress it. Once this has directory has been uncompressed, move the individual folders (`code`, `data`, `docs`, `figures`, and `other`) within this folder into your GitHub Desktop repository within your file browser.
 
 >**Note: only move the folders _inside_ of `githubdesktop_workshop_materials`, but do not move the parent `githubdesktop_workshop_materials` folder itself or the `util_functions.R` or `Pi Formulas -- from Wolfram MathWorld.pdf` files in that folder -- we will get to those file later**
 
@@ -160,7 +158,7 @@ You'll notice that GitHub Desktop will actually show you any changes you made to
 
 >Note: To the right of each file, you'll see a `+` in a box. This indicates that these are newly added files. If you were to delete a file, you would see a `-`, and if you modify an existing file, you'll see a `dot`
 
-These changes have been noted, but this new *version* of the repository is not yet recorded (saved) by Git. A **commit** tells Git that you made some changes which you want to record. Though a **commit** seems similar to saving a file, there are different aims behind ‘committing’ changes compared to saving changes. **Commits** take a snapshot of the file(s) at that point. You can actually record or commit modifications to multiple files/folders at once. i.e. single commit can have multiple updates.  
+These changes have been noted, but this new *version* of the repository is not yet been recorded (saved) by Git. A **commit** tells Git that you made some changes which you want to record. Though a **commit** seems similar to saving a file, there are different aims behind ‘committing’ changes compared to saving changes. **Commits** take a snapshot of the file(s) at that point. You can actually record or commit modifications to multiple files/folders at once. i.e. single commit can have multiple updates.  
 
 Committing changes usually happens in 2 stages:
 1. `add` or stage one or many modifications incrementally
@@ -177,7 +175,7 @@ After the commit, your screen will return to how it looked before, but it will t
 </p>
 
 
-A useful way to think about commits is as the ‘history’ of your project. Each commit records a development or change made to the documents in your repository; the history of the project can be traced back by looking at all of the commits. You can directly view this `History` by clicking on the `History` tab on the left hand side of the application:
+A useful way to think about commits is as the "history" of your project. Each commit records a development or change made to the documents in your repository; the history of the project can be traced back by looking at all of the commits. You can directly view this `History` by clicking on the `History` tab on the left hand side of the application:
 
 <p align="center">
     <img src="../img/2.GHD_first_commit_history.png" width="800" align="center">
@@ -192,7 +190,7 @@ A useful way to think about commits is as the ‘history’ of your project. Eac
 >
 > When you commit you will see <code>commit to <b>main</b></code>. This refers to the **main** branch. 
 > 
-> Within a Git repository it is possible to have multiple ‘branches’. These different branches are essentially different (virtual) places in which to work. Often they are used to test new ideas or work on a particular feature without modifying or "contaminating" the master copy (e.g. production version of a webpage). This feature is very useful when collaborating with others. We will go into this aspect of Version Control later in this workshop.
+> Within a Git repository it is possible to have multiple ‘branches’. These different branches are essentially different (virtual) places in which to work. Often they are used to test new ideas or work on a particular feature without modifying or "contaminating" the master copy (e.g. current release of software). This feature is very useful when collaborating with others. We will go into this aspect of Version Control later in this workshop.
 
 ### Changing File Contents and Committing Changes
 
