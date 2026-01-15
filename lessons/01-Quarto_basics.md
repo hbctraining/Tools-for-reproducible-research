@@ -164,7 +164,7 @@ ___
 3. **Modify the `author` and `title`** parameters at the top of the script to have your name and your chosen title
 4. **Render the markdown**. 
 
-[Answer Key](01_Quarto_basics_Answer_key.qmd)
+[Answer Key](https://raw.githubusercontent.com/hbctraining/Tools-for-reproducible-research/master/lessons/01_Quarto_basics_Answer_key.qmd)
 
 ***
 
