@@ -1,43 +1,65 @@
 ---
 title: Making your research reproducible
-subtitle: knitr and RMarkdown
+subtitle: Quarto
 author: Michael J. Steinbaugh, Meeta Mistry, Radhika Khetani, Jihe Liu, Mary Piper
 ---
 
 ## Learning Objectives
-* Use code chunk options to customize the report 
-* Describe how to add figures and tables to an RMarkdown
-* Describe how to specify the output format for RMarkdown
+
+- Use code chunk options to customize the report 
+- Describe how to add figures and tables to an RMarkdown
+- Describe how to specify the output format for RMarkdown
 
 
 ## More about Code chunks
 
-By this point, we have mentioned the word "knit" quite a few times, and you have installed and loaded the `knitr` package too. But, we have not yet fully defined what it is. [knitr](https://yihui.name/knitr/) is an R package, developed by [Yihui Xie](https://yihui.name), designed to convert RMarkdown and a couple of other file formats into a final report document in HTML, PDF or other formats. 
+Our code chunks allow for a lot of customization options. These options are written in the form of `#| option_name: option_value`.
 
-The `knitr` package provides a lot of customization options for code chunks embedded within the file. These options are written in the form of `tag=value`.
+````
+```{r}
+#| label: creating_variables
+#| echo: false
+#| warning: false
+# Assign a value to x
+x <- 4
 
-<img src="../img/r-chunkoptions.png">
+# Assign a value to y
+y <- 2
 
-There is a [comprehensive list](https://yihui.org/knitr/options/) of all the available options, however when starting out this can be overwhelming. Here, we provide a short list of some options commonly used in code chunks:
+# Sum the values x and y
+x + y
+```
+````
 
-* `echo = TRUE`: whether to include R source code in the final knitted document. If echo = FALSE, R source code will not be written. But the code is still evaluated and its output will be included in the final document.
-* `eval = TRUE`: whether to evaluate/execute the code.
-* `include = TRUE`: whether to include R source code and its output in the final document. If include = FALSE, nothing (R source code and its output) will be written into the final document. But the code is still evaluated and plot files are generated if there are any plots in the chunk.
-* `warning = TRUE`: whether to preserve warnings in the output like we run R code in a terminal (if FALSE, all warnings will be printed in the console instead of the output document).
-* `message = TRUE`: whether to preserve messages emitted by message() in the final output document (similar to warning).
-* `results = "asis"`: output as-is, i.e., write raw results from R into the output document instead of LaTeX-formatted output. Another useful option for this option is "hide", which will hide the results, or all normal R output.
+There is a [comprehensive list](https://quarto.org/docs/reference/formats/html.html) of all the available options, however when starting out this can be overwhelming. Here, we provide a short list of some options commonly used in code chunks:
 
+* `#| echo: true`: whether to include R source code in the final rendered document. If echo = FALSE, R source code will not be written. But the code is still evaluated and its output will be included in the final document.
+* `#| eval: true`: whether to evaluate/execute the code.
+* `#| include: true`: whether to include R source code and its output in the final document. If include = FALSE, nothing (R source code and its output) will be written into the final document. But the code is still evaluated and plot files are generated if there are any plots in the chunk.
+* `#| warning: true`: whether to preserve warnings in the output like when we run R code in a terminal (if FALSE, all warnings will be printed in the console instead of the output document).
+* `#| message: true`: whether to preserve messages emitted by message() in the final output document (similar to warning).
+* `#| results: "asis"`: output as-is, i.e., write raw results from R into the output document instead of LaTeX-formatted output. Another useful option for this option is "hide", which will hide the results or all normal R output.
 
 ### Global options
 
-`knitr` also allows for global options, which means choosing **options that apply to all code chunks in an RMarkdown file**. These will be the default options used for all the code chunks in the document, unless a modification is specified in an individual code chunk.
+Quarto also allows for global options, which means choosing **options that apply to all code chunks in an Quarto Markdown file**. These will be the default options used for all the code chunks in the document, unless a modification is specified in an individual code chunk.
 
-Global options should be placed inside your `setup` code chunk. The **`setup` chunk is a special knitr chunk that should be placed at the start of the document**. We recommend storing all `library()` loads required for the script in this `setup` chunk too! 
+Global options should be placed inside your YAML at the top of your Quarto Markdown. 
 
-<img src="../img/setup_chunk2.png" width="500">
-
-> **NOTE:** An additional cool trick is that you can save `opts_chunk$set` settings in a hidden file called `.Rprofile`. This file is located in your home directory and accessed by RStudio everytime your open up a new session. By setting this up, these knitr options will apply to all of your RMarkdown documents that you create.
-
+````
+---
+title: "Your title"
+author: "Your name"
+date: "`r Sys.Date()`"
+format:
+  html:
+    fig-width: 6
+    fig-height: 4
+execute:
+  echo: false
+  warning: false
+---
+````
 ___
 
 #### Exercise #3
