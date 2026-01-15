@@ -130,7 +130,7 @@ The basic idea behind Quarto is that you can describe your analysis workflow and
 <img src="../img/Quarto_code_chunk_example.png" width="350">
 </p>
 
-Each individual code chunk should be given a **unique** name. The name should be something meaningful and we recommend using [snake_case](https://en.wikipedia.org/wiki/Snake_case) for the names whenever possible. 
+Each individual code chunk should be given a **unique** label. The label goes after the `#| label: ` code block option. The label should be something meaningful and we recommend using [snake_case](https://en.wikipedia.org/wiki/Snake_case) for the names whenever possible. There are more code block options besides label that we will discuss in the next lesson.
 
 There is a handy `Insert` button within RStudio that allows you to insert an empty R chunk in your document without having to type the backticks etc. yourself. 
 
