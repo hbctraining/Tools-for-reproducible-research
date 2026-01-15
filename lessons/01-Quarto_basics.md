@@ -7,7 +7,7 @@ author: Michael J. Steinbaugh, Meeta Mistry, Radhika Khetani, Jihe Liu, Mary Pip
 ## Learning Objectives
 
 * Describe the need for reproducible research 
-* Create RMarkdown reports for sharing analysis methods, code and results
+* Create Quarto reports for sharing analysis methods, code and results
 
 ## Making your research reproducible
  
@@ -22,20 +22,20 @@ When you do lab work, you use lab notebooks to organize your methods, results, a
 *Image source: "Reproducible Research in Computational Science", Peng 2011 https://doi.org/10.1126/science.1213847*
 
 
-## RMarkdown
+## Quarto
 
 Creating the "gold standard" code is not always easy depending on what programming language you are using. For analyses within R, RStudio helps facilitate reproducible research with the use of R scripts, which document all code used to perform a particular analysis. However, we often don't save the version of the tools we use in a script, nor do we include or interpret the results of the analyses within the script.
 
-In the first part of this workshop we will be learning about **[RMarkdown](https://rmarkdown.rstudio.com/)**. RMarkdown is a file format in its most basic form, that can eventually be converted into a shareable document, e.g HTML, PDF and many others. It allows you to document not just your R (Python and SQL) code, but also enables the inclusion of tables, figures, along with descriptive text. **Thus resulting in a final document that has the methods, the code and interpretation of results all in a single document!** 
+In the first part of this workshop we will be learning about **[Quarto](https://quarto.org/)**. Quarto is the successor to **[RMarkdown](https://rmarkdown.rstudio.com/)** and much of the syntax in Quarto is similar to the RMarkdown syntax. Quarto is a file format in its most basic form, that can eventually be converted into a shareable document, e.g HTML, PDF and many others. It allows you to document not just your R (and Python) code, but also enables the inclusion of tables, figures, along with descriptive text. **Thus resulting in a final document that has the methods, the code and interpretation of results all in a single document!** 
 
 To elaborate, you write a file using the **Markdown language** and within it **embed executable R code chunks**. The code chunks are paired with **knitr syntax**, so that once your document is complete, you can easily convert it into one of several common formats (i.e. HTML, PDF, PPT) for sharing or documentation.
 
 
 <p align="center">
-<img src="../img/rmarkdown_workflow.png" width="500">
+<img src="../img/rstudio-qmd-how-it-works.png" width="500">
 </p>
 
-*Image source: [Applied R code](http://applied-r.com/project-reporting-template/)*
+*Image source: [Quarto Documentation](https://quarto.org/docs/get-started/hello/rstudio.html)*
 
 ***Wait, what?*** 
 
@@ -45,50 +45,54 @@ Ready to get started?
 
 ---
 
-### Exercise #1: Knit an RMarkdown file to generate an HTML document
+### Exercise #1: Knit a Quarto file to generate an HTML document
 
-Before we delve into the details, we will start with an activity to show you what an RMarkdown file (.Rmd extension) looks like, and how to generate the resulting HTML report using the `knit()` function (which is part of the R [knitr package](https://yihui.name/knitr/)). HTML format is a common format output from "knitting" Rmd documents and is the default file format interpreted by web browsers. HTML is oftentimes the format that websites are written in. 
+Before we delve into the details, we will start with an activity to show you what a Quarto file (.qmd extension) looks like, and how to generate the resulting HTML report using the `knit()` function (which is part of the R [knitr package](https://yihui.name/knitr/)). HTML format is a common format output from "knitting" Quarto documents and is the default file format interpreted by web browsers. HTML is oftentimes the format that websites are written in. 
 
-1. Open up RStudio and **create a new project** in a new directory called `rmd_workshop`. Remember the location in computer where you create this project.
-2. **Right click [this RMarkdown file](https://raw.githubusercontent.com/hbctraining/Training-modules/master/Rmarkdown/data/workshop-example.Rmd)**. Download it (using **Save Link As**) and place it within the `rmd_workshop` project directory.
-3. **Download and uncompress [this data folder](../data/data.zip?raw=true)** within the `rmd_workshop` project directory.
-4. **Open the .rmd file** in RStudio.
-5. **knit the markdown** by clicking on the `Knit` button located at the top of your script editor pane.
+1. Open up RStudio and **create a new project** in a new directory called `quarto_workshop`. Remember the location in computer where you create this project.
+2. **Right click [this Quarto (.qmd) file](https://www.dropbox.com/scl/fi/poag63jihksy0q9qaemt2/workshop-example.qmd?rlkey=rmenoz5xbh6ggtjse5dw0t031&dl=1)**. Download it (using **Save Link As**) and place it within the `quarto_workshop` project directory.
+3. **Download and uncompress [this data folder](https://www.dropbox.com/scl/fi/aopijxt8kyw8p8hppdtzm/data.zip?rlkey=qkrdf0419jjcm602di0kx6dq0&dl=1)** within the `quarto_workshop` project directory.
+4. **Open the .qmd file** in RStudio.
+5. **Render the markdown** by clicking on the `Render` button located at the top of your script editor pane.
 
-<img src="../img/r-knit-button.png">
+<p align="center">
+  <img src="../img/Render_button_with_label.png"
+       width="500">
+</p>
 
 In the console, you will see a flurry of text scrolling by. The text indicates progress while each code chunk is being executed. Once the document is finished 'knitting', a new window will be automatically opening up with the HTML report that was just generated. 
 
-> **NOTE**: If you run into an error when knitting the markdown, make sure the directory structure of the `rmd_workshop` project is set properly as shown below:
-> - The `data` folder should be in the same directory as `workshop-example.rmd` file
+> **NOTE**: If you run into an error when knitting the markdown, make sure the directory structure of the `quarto_workshop` project is set properly as shown below:
+> - The `data` folder should be in the same directory as `workshop-example.qmd` file
 > - Two files (`counts.rpkm.csv` and `mouse_exp_design.csv`) are located inside the `data` folder
 > <p align="center">
-> <img src="../img/workingDir_screenshot.png" width="450">
-> </p>
+> <img src="../img/Quarto_workingdir_with_label.png"
+>      width="500">
+></p>
 
 ---
 
-## RMarkdown basics
+## Quarto basics
 
-[Markdown](https://en.wikipedia.org/wiki/Markdown) is a lightweight markup language with **plain-text-formatting syntax**. It is often used for formatting README files, writing messages in online discussion forums, and creating *rich text* documents using a plain text editor. The Markdown language has been adopted by many different coding groups, and some have added their own "flavours". RStudio implements an **"R-flavoured markdown"**, or **"RMarkdown"**, which has really nice features for text and code formatting.
+[Markdown](https://en.wikipedia.org/wiki/Markdown) is a lightweight markup language with **plain-text-formatting syntax**. It is often used for formatting README files, writing messages in online discussion forums and creating *rich text* documents using a plain text editor. The Markdown language has been adopted by many different coding groups and some have added their own "flavors". RStudio orinignally implemented an **"R-flavored markdown"**, or **"RMarkdown"**, which has really nice features for text and code formatting. This has evolved over time and has been updated to be **"Quarto Markdown"**.
 
-> The [RStudio cheatsheet for Rmarkdown](https://github.com/rstudio/cheatsheets/blob/master/rmarkdown-2.0.pdf) is quite daunting, but includes more advanced Rmarkdown options that may be helpful as you become familiar with report generation, including options for adding interactive plots RShiny.
+> The [RStudio cheatsheet for Quarto](https://www.dropbox.com/scl/fi/p7om35v3sumkpac4dvh1z/quarto_cheatsheet.pdf?rlkey=em4hhjspepemwn2gxzn2p472m&dl=1) is quite daunting, but includes more advanced Quarto options that may be helpful as you become familiar with report generation.
 
-### Components of a `.Rmd` file
+### Components of a `.qmd` file
 
-Let's take a closer look at the "raw" `workshop-example.Rmd` file and understand the components therein.
+Let's take a closer look at the "raw" `workshop-example.qmd` file and understand the components therein.
 
 **1. A file header in YAML format**
 ```
 ---
-title: "Workshop Rmd example"
+title: "Workshop Quarto example"
 author: "HBC Training Team"
 date: "`r Sys.Date()`"
 output: html_document
 ---
 ```
 
-This section has information listed in [YAML format](https://yaml.org/), and is usually used to specify metadata (title, author) and basic **configuration** information (output format) associated with the file. You can find detailed information about specifications that can be made in this section on [this webpage](https://bookdown.org/yihui/rmarkdown/html-document.html).
+This section has information listed in [YAML format](https://yaml.org/), and is usually used to specify metadata (title, author) and basic **configuration** information (output format) associated with the file. You can find detailed information about specifications that can be made in this section on [this webpage](https://quarto-tdg.org/yaml).
 
 **2. Descriptive text**
 
@@ -103,13 +107,15 @@ In this example report we are using a *toy dataset* to determine the impact of a
 
 The syntax for formatting the text portion of the report is relatively easy. You can easily get text that is **bolded**, *italicized*, ***bolded & italicized***. You can create "headers" and "sub-headers" to organize the information by placing an "#" or "##" and so on in front of a line of text, generate numbered and bulleted lists, add hyperlinks to words or phrases, and so on.
 
-Let's take a look at the syntax of how to do this in RMarkdown:
+Let's take a look at the syntax of how to do this in Quarto:
 
 <p align="center">
 <img src="../img/rmd-syntax.png" width="650">
 </p>
 
-You can also get more information about Markdown formatting [here](http://rmarkdown.rstudio.com/lesson-1.html) and [here](http://rmarkdown.rstudio.com/authoring_basics.html).
+> Note: While the header says RMarkdown, the syntax for formatting text in Quarto is that same.
+
+You can also get more information about Quarto formatting [here](https://quarto.org/docs/get-started/hello/rstudio.html)..
 
 > Fun fact! These lessons, and the schedule page were created using basic Markdown format (not R Markdown).
 > Here's an example:
