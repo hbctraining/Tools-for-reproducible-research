@@ -1,6 +1,6 @@
 ---
 title: Making your research reproducible
-subtitle: knitr and RMarkdown
+subtitle: Quarto
 author: Michael J. Steinbaugh, Meeta Mistry, Radhika Khetani, Jihe Liu, Mary Piper
 ---
 
@@ -28,8 +28,7 @@ Creating the "gold standard" code is not always easy depending on what programmi
 
 In the first part of this workshop we will be learning about **[Quarto](https://quarto.org/)**. Quarto is the successor to **[RMarkdown](https://rmarkdown.rstudio.com/)** and much of the syntax in Quarto is similar to the RMarkdown syntax. Quarto is a file format in its most basic form, that can eventually be converted into a shareable document, e.g HTML, PDF and many others. It allows you to document not just your R (and Python) code, but also enables the inclusion of tables, figures, along with descriptive text. **Thus resulting in a final document that has the methods, the code and interpretation of results all in a single document!** 
 
-To elaborate, you write a file using the **Markdown language** and within it **embed executable R code chunks**. The code chunks are paired with **knitr syntax**, so that once your document is complete, you can easily convert it into one of several common formats (i.e. HTML, PDF, PPT) for sharing or documentation.
-
+To elaborate, you write a file using the **Markdown language** and within it **embed executable R code chunks**. The code chunks are paired with **Quarto syntax**, so that once your document is complete, you can easily convert it into one of several common formats (i.e. HTML, PDF, PPT) for sharing or documentation.
 
 <p align="center">
 <img src="../img/rstudio-qmd-how-it-works.png" width="500">
@@ -45,9 +44,9 @@ Ready to get started?
 
 ---
 
-### Exercise #1: Knit a Quarto file to generate an HTML document
+### Exercise #1: Render a Quarto file to generate an HTML document
 
-Before we delve into the details, we will start with an activity to show you what a Quarto file (.qmd extension) looks like, and how to generate the resulting HTML report using the `knit()` function (which is part of the R [knitr package](https://yihui.name/knitr/)). HTML format is a common format output from "knitting" Quarto documents and is the default file format interpreted by web browsers. HTML is oftentimes the format that websites are written in. 
+Before we delve into the details, we will start with an activity to show you what a Quarto file (.qmd extension) looks like, and how to generate the resulting HTML report using the `quarto_render()` function (which is part of the R [quarto package](https://cran.r-project.org/web/packages/quarto/index.html)). HTML format is a common format output from rendering Quarto documents and is the default file format interpreted by web browsers. HTML is oftentimes the format that websites are written in. 
 
 1. Open up RStudio and **create a new project** in a new directory called `quarto_workshop`. Remember the location in computer where you create this project.
 2. **Right click [this Quarto (.qmd) file](https://www.dropbox.com/scl/fi/poag63jihksy0q9qaemt2/workshop-example.qmd?rlkey=rmenoz5xbh6ggtjse5dw0t031&dl=1)**. Download it (using **Save Link As**) and place it within the `quarto_workshop` project directory.
@@ -60,9 +59,9 @@ Before we delve into the details, we will start with an activity to show you wha
        width="500">
 </p>
 
-In the console, you will see a flurry of text scrolling by. The text indicates progress while each code chunk is being executed. Once the document is finished 'knitting', a new window will be automatically opening up with the HTML report that was just generated. 
+In the console, you will see a flurry of text scrolling by. The text indicates progress while each code chunk is being executed. Once the document is finished rendering, a new window will be automatically opening up with the HTML report that was just generated. 
 
-> **NOTE**: If you run into an error when knitting the markdown, make sure the directory structure of the `quarto_workshop` project is set properly as shown below:
+> **NOTE**: If you run into an error when rendering the markdown, make sure the directory structure of the `quarto_workshop` project is set properly as shown below:
 > - The `data` folder should be in the same directory as `workshop-example.qmd` file
 > - Two files (`counts.rpkm.csv` and `mouse_exp_design.csv`) are located inside the `data` folder
 > <p align="center">
@@ -125,16 +124,18 @@ You can also get more information about Quarto formatting [here](https://quarto.
 
 **3. Code chunks**
 
-<img src="../img/code_chunk_example2.png" width = "350">
+The basic idea behind Quarto is that you can describe your analysis workflow and provide interpretation of results in plain text, while interspersing chunks of R code within that document to tell a complete story using a single document. Code chunks in Quarto are delimited with a special marker (\`\`\`). Backticks (\`) commonly indicate a chunk of code. This syntax is also used for formatting text on [GitHub](https://github.com). 
 
-The basic idea behind RMarkdown is that you can describe your analysis workflow and provide interpretation of results in plain text, and intersperse chunks of R code within that document to tell a complete story using a single document. Code chunks in RMarkdown are delimited with a special marker (\`\`\`). Backticks (\`) commonly indicate a chunk of code. This syntax is also used for formatting text on [GitHub](https://github.com). 
+<p align="center">
+<img src="../img/Quarto_code_chunk_example.png" width="350">
+</p>
 
-Each individual code chunk should be given a **unique** name. The name should be something meaningful, and we recommend using [snake_case](https://en.wikipedia.org/wiki/Snake_case) for the names whenever possible. 
+Each individual code chunk should be given a **unique** name. The name should be something meaningful and we recommend using [snake_case](https://en.wikipedia.org/wiki/Snake_case) for the names whenever possible. 
 
 There is a handy `Insert` button within RStudio that allows you to insert an empty R chunk in your document without having to type the backticks etc. yourself. 
 
 <p align="center">
-<img src="../img/rmd_chunk_insert_button.png" width = "400">
+<img src="../img/add_code_chunk_with_label.png" width = "400">
 </p>
 
 Alternatively, there are keyboard shortcuts available as well.
@@ -148,22 +149,20 @@ For the **final code chunk in your analysis, it is recommended to run the `sessi
 
 ### Generating the report
 
-Once we have finished creating an RMarkdown file, we finally need to "knit" the report. You can knit the files by using the `knit()` function, or by just clicking on "knit" in the panel above the script as we had done in our first activity in this lesson. 
+Once we have finished creating an Quarto Markdown file, we finally need to render the report. You can render the files by using the `quarto_render()` function, or by just clicking on "Render" in the panel above the script as we had done in our first activity in this lesson. 
 
-> Note that when creating your own reports, you will very likely find yourself knitting the report periodically as you work through rather than just once at the end. It is an iterative process usually since you may have to turn off warnings, or if you decide you need a figure to be larger/smaller, or updating the descriptive text in the document to be informative (for others and your future self).
+> Note: When creating your own reports, you will very likely find yourself rendering the report periodically as you work through rather than just once at the end. It is an iterative process usually since you may have to turn off warnings, or if you decide you need a figure to be larger/smaller, or updating the descriptive text in the document to be informative (for others and your future self).
 
-When you click on the "knit" button, by default an HTML report will be generated. If you would prefer a different document format, this can be specified in the YAML header with the `output:` parameter as discussed above, or you can also click on the button in the panel above the script and click on "Knit" to get the various options as shown in the image under the 5th step of Exercise #1 above.
-
-> **Note**: *PDF rendering is sometimes problematic, especially when running R remotely, like on the cluster. If you run into problems, it's likely an issue related to [pandoc](http://pandoc.org).*
+When you click on the "Render" button, by default an HTML report will be generated. If you would prefer a different document format, this can be specified in the YAML header with the `output:` parameter as discussed above.
 
 ___
 
-#### Exercise #2: Make additions to the Rmd file for a more complete report!
+#### Exercise #2: Make additions to the qmd file for a more complete report!
 
-1. Scroll down to the end of the `workshop-example.Rmd` document. **Add a new code chunk.** Within the code chunk place the code `sessionInfo()`.
+1. Scroll down to the end of the `workshop-example.qmd` document. **Add a new code chunk.** Within the code chunk place the code `sessionInfo()`.
 2. **Add a new section header** above the newly created code chunk. Use a title that best describes the output. Have this header be the same size as the "Project details" header.
 3. **Modify the `author` and `title`** parameters at the top of the script to have your name and your chosen title
-4. **Knit the markdown**. 
+4. **Render the markdown**. 
 
 [Answer Key](https://raw.githubusercontent.com/hbctraining/Training-modules/master/Rmarkdown/data/workshop-answer-activity3.Rmd)
 
