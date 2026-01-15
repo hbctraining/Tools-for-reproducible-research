@@ -49,7 +49,7 @@ Ready to get started?
 Before we delve into the details, we will start with an activity to show you what a Quarto file (.qmd extension) looks like, and how to generate the resulting HTML report using the `quarto_render()` function (which is part of the R [quarto package](https://cran.r-project.org/web/packages/quarto/index.html)). HTML format is a common format output from rendering Quarto documents and is the default file format interpreted by web browsers. HTML is oftentimes the format that websites are written in. 
 
 1. Open up RStudio and **create a new project** in a new directory called `quarto_workshop`. Remember the location in computer where you create this project.
-2. **Right click [this Quarto (.qmd) file](https://www.dropbox.com/scl/fi/poag63jihksy0q9qaemt2/workshop-example.qmd?rlkey=rmenoz5xbh6ggtjse5dw0t031&dl=1)**. Download it (using **Save Link As**) and place it within the `quarto_workshop` project directory.
+2. **Right click [this Quarto (.qmd) file](https://www.dropbox.com/scl/fi/poag63jihksy0q9qaemt2/workshop-example.qmd?rlkey=rmenoz5xbh6ggtjse5dw0t031&st=oy8qinbk&dl=1)**. Download it (using **Save Link As**) and place it within the `quarto_workshop` project directory.
 3. **Download and uncompress [this data folder](https://www.dropbox.com/scl/fi/aopijxt8kyw8p8hppdtzm/data.zip?rlkey=qkrdf0419jjcm602di0kx6dq0&dl=1)** within the `quarto_workshop` project directory.
 4. **Open the .qmd file** in RStudio.
 5. **Render the markdown** by clicking on the `Render` button located at the top of your script editor pane.
@@ -130,7 +130,7 @@ The basic idea behind Quarto is that you can describe your analysis workflow and
 <img src="../img/Quarto_code_chunk_example.png" width="350">
 </p>
 
-Each individual code chunk should be given a **unique** name. The name should be something meaningful and we recommend using [snake_case](https://en.wikipedia.org/wiki/Snake_case) for the names whenever possible. 
+Each individual code chunk should be given a **unique** label. The label goes after the `#| label: ` code block option. The label should be something meaningful and we recommend using [snake_case](https://en.wikipedia.org/wiki/Snake_case) for the names whenever possible. There are more code block options besides label that we will discuss in the next lesson.
 
 There is a handy `Insert` button within RStudio that allows you to insert an empty R chunk in your document without having to type the backticks etc. yourself. 
 
@@ -164,7 +164,7 @@ ___
 3. **Modify the `author` and `title`** parameters at the top of the script to have your name and your chosen title
 4. **Render the markdown**. 
 
-[Answer Key](https://raw.githubusercontent.com/hbctraining/Training-modules/master/Rmarkdown/data/workshop-answer-activity3.Rmd)
+[Answer Key](01_Quarto_basics_Answer_key.qmd)
 
 ***
 
