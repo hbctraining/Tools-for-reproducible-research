@@ -126,9 +126,14 @@ You can also get more information about Quarto formatting [here](https://quarto.
 
 The basic idea behind Quarto is that you can describe your analysis workflow and provide interpretation of results in plain text, while interspersing chunks of R code within that document to tell a complete story using a single document. Code chunks in Quarto are delimited with a special marker (\`\`\`). Backticks (\`) commonly indicate a chunk of code. This syntax is also used for formatting text on [GitHub](https://github.com). 
 
-<p align="center">
-<img src="../img/Quarto_code_chunk_example.png" width="350">
-</p>
+````
+```{r}
+#| label: load_libraries
+# Bioconductor and CRAN libraries used
+library(knitr)
+library(ggplot2)
+```
+````
 
 Each individual code chunk should be given a **unique** label. The label goes after the `#| label: ` code block option. The label should be something meaningful and we recommend using [snake_case](https://en.wikipedia.org/wiki/Snake_case) for the names whenever possible. There are more code block options besides label that we will discuss in the next lesson.
 
