@@ -77,20 +77,36 @@ ___
 
 ## Adding figures
 
-A neat feature of knitr is how much simpler it is to generate and add figures to a report! For the most part, you don’t need to do anything special, just add a code chunk that generates a figure. When the file is knit, the figure will automatically be produced and inserted into the final document. A single chunk can support multiple plots, and they will be appear one after the other below the chunk. 
+A neat feature of Quarto is how much simpler it is to generate and add figures to a report! For the most part, you don’t need to do anything special, just add a code chunk that generates a figure. When the file is rendered, the figure will automatically be produced and inserted into the final document. A single chunk can support multiple plots, and they will be appear one after the other below the chunk. 
 
-There are a few code chunk options commonly used for plots. For example, to easily resize the figures in the final report, you can specify the `fig.height` and `fig.width` of the figure when setting up the code chunk.
+There are a few code chunk options commonly used for plots. For example, to easily resize the figures in the final report, you can specify the `fig.height` and `fig.width` of the figure when setting up the code chunk. When these code chunk options are specificied for a given code chunk, they will override any global options that were set.
 
-<img src="../img/r-figure.png">
+````
+```{r}
+#| label: scatterplot
+#| fig-width: 8
+#| fig-height: 6
+# Create scatterplot of data
+ggplot(new_meta) +
+    geom_point(aes(x=age_in_days, y=samplemeans, color=genotype, shape=celltype), size=rel(3.0)) +
+    theme_bw() +
+    theme(axis.text=element_text(size=rel(1.5)),
+          axis.title=element_text(size=rel(1.5)),
+          plot.title=element_text(hjust=0.5)) +
+    xlab("Age (days)") +
+    ylab("Mean expression") +
+    ggtitle("Expression with Age")
+```
+````
 
-In addition to displaying it in the report, you can also have `knitr` automatically write the files to a subfolder by using the code chunk option `dev`.
+In addition to displaying it in the report, you can also have Quarto automatically write the files to a subfolder by using the code chunk option `dev`.
 
 ## Adding tables
 
-`knitr` includes a simple but powerful function for generating stylish tables in a knit report named `kable()`. Here's an example using R's built-in `mtcars` dataset:
+Quarto includes a simple but powerful function for generating stylish tables in a report named `kable()`. `kable()` is actually part of the `knitr` package, which was used in to render Rmarkdown files, but it also works with Quarto Markdown files. Here's an example using R's built-in `mtcars` dataset:
 
 ```r
-help("kable", "knitr")
+help("kable")
 mtcars %>%
     head %>%
     kable
@@ -105,13 +121,13 @@ mtcars %>%
 | Hornet Sportabout |  18.7|    8|   360|  175|  3.15|  3.440|  17.02|    0|    0|     3|     2|
 | Valiant           |  18.1|    6|   225|  105|  2.76|  3.460|  20.22|    1|    0|     3|     1|
 
-There are some other functions that allow for more powerful customization of tables, including `pander::pander()` and `xtable::xtable()`, but the simplicity and cross-platform reliability of `knitr::kable()` makes it an easy pick.
+There are some other functions that allow for more powerful customization of tables, including `pander::pander()` and `xtable::xtable()`, but the simplicity and cross-platform reliability of `kable()` makes it an easy pick. For longer tables that you'd like to be searchable, `DT::datatable()` is a really nice option as well.
 
 ## Working directory behavior
 
-`knitr` redefines the working directory of an RMarkdown file in a manner that can be confusing. Make sure that any paths to files specified in the RMarkdown document is relative to its location, and not relative to your current working directory.
+Quarto redefines the working directory of an Quarto Markdown file in a manner that can be confusing. Make sure that any paths to files specified in the Quarto Markdown document are relative to its location and not relative to your current working directory.
 
-A simple way to make sure that the paths are not an issue is by creating an R project for the analysis, and saving all RMarkdown files at the top level and referring to the data and output files within the project directory. This will prevent unexpected problems related to this behavior.
+A simple way to make sure that the paths are not an issue is by creating an R project for the analysis, and saving all Quarto Markdown files at the top level and referring to the data and output files within the project directory. This will prevent unexpected problems related to this behavior.
 
 ***
 
