@@ -10,11 +10,9 @@ BiocManager::install("pheatmap")
 
 2. **Download the linked [R script](https://www.dropbox.com/scl/fi/7dexob97xeigu31owv86r/Rscript.R?rlkey=zkpnbcqekwtxndmay8ghnrlhm&st=gp353rr6&dl=1)** and save it within the `quarto_workshop` project directory.
 
-3. **Download the linked [RData object](https://www.dropbox.com/scl/fi/w1fu0ynjx1vh7l7nludjv/Quarto_data.Rdata?rlkey=sep7cnqmkdr1tqprqm045deb6&st=0ru6uzvh&dl=1)** by right-clicking and save it to the `data` folder within the `quarto_workshop` project directory.
+3. Open the Rscript file, **transform the R script into a Quarto Markdown file** by clicking `File` -> `Rename`, and rename it as `Rscript.qmd`.
 
-4. Open the Rscript file, **transform the R script into a Quarto Markdown file** by clicking `File` -> `Rename`, and rename it as `Rscript.qmd`.
-
-5. It now has the correct extension for an Quarto Markdown file, but you won't be able to knit it as is. Add the following updates to be able to knit this file:
+4. It now has the correct extension for an Quarto Markdown file, but you won't be able to knit it as is. Add the following updates to be able to knit this file:
     - Add a basic YAML header at the top 
     - Create an R chunk for all code underneath each `#` comment in the original R script
     - Comment on the plots (you may have to run the code from the R script to see the plots first)
@@ -22,6 +20,6 @@ BiocManager::install("pheatmap")
     - (Optional) If you would like to have a button that show/hide your code in the report, you can add an additional argument in the YAML header by referring to this [instruction](https://quarto.org/docs/output-formats/html-code.html#folding-code).
     - Add a code chunk with `sessionInfo()` at the end
 
-6. **Render the markdown**
+5. **Render the markdown**
 
-7. Upload the new Quarto file and the HTML report to the Dropbox link on the schedule page.
+6. Upload the new Quarto file and the HTML report to the Dropbox link on the schedule page.
