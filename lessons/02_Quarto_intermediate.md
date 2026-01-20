@@ -7,13 +7,13 @@ author: Michael J. Steinbaugh, Meeta Mistry, Radhika Khetani, Jihe Liu, Mary Pip
 ## Learning Objectives
 
 - Use code chunk options to customize the report 
-- Describe how to add figures and tables to an RMarkdown
-- Describe how to specify the output format for RMarkdown
-
+- Describe how to add figures and tables to a Quarto report
 
 ## More about Code chunks
 
-Our code chunks allow for a lot of customization options. These options are written in the form of `#| option_name: option_value`.
+Our code chunks allow for a lot of customization options. These options are written in the form of:
+
+`#| option_name: option_value`
 
 ````
 ```{r}
@@ -33,10 +33,10 @@ x + y
 
 There is a [comprehensive list](https://quarto.org/docs/reference/formats/html.html) of all the available options, however when starting out this can be overwhelming. Here, we provide a short list of some options commonly used in code chunks:
 
-* `#| echo: true`: whether to include R source code in the final rendered document. If echo = FALSE, R source code will not be written. But the code is still evaluated and its output will be included in the final document.
+* `#| echo: true`: whether to include R source code in the final rendered document. If `echo: false`, R source code will not be written. But the code is still evaluated and its output will be included in the final document.
 * `#| eval: true`: whether to evaluate/execute the code.
-* `#| include: true`: whether to include R source code and its output in the final document. If include = FALSE, nothing (R source code and its output) will be written into the final document. But the code is still evaluated and plot files are generated if there are any plots in the chunk.
-* `#| warning: true`: whether to preserve warnings in the output like when we run R code in a terminal (if FALSE, all warnings will be printed in the console instead of the output document).
+* `#| include: true`: whether to include R source code and its output in the final document. If `include: false`, nothing (R source code and its output) will be written into the final document. But the code is still evaluated and plot files are generated if there are any plots in the chunk.
+* `#| warning: true`: whether to preserve warnings in the output like when we run R code in a terminal (if `warning: false`, all warnings will be printed in the console instead of the output document).
 * `#| message: true`: whether to preserve messages emitted by message() in the final output document (similar to warning).
 * `#| results: "asis"`: output as-is, i.e., write raw results from R into the output document instead of LaTeX-formatted output. Another useful option for this option is "hide", which will hide the results or all normal R output.
 
@@ -62,13 +62,13 @@ execute:
 ````
 ___
 
-#### Exercise #3
+#### Exercise
 
 1. Only some of the code chunks in the `workshop-example.qmd` file have names; go through and **add names to the unnamed code chunks**.
 2. For the code chunk named `data-ordering` do the following:
     - First, **add a new line of code** to display first few rows of the newly created `data_ordered` data frame. You may use `head()` function here.
     - Next, **modify the options** for (`data-ordering`) such that in the rendered report, the output from the new line of code will show up, but the code is hidden.
-3. Without removing the second-to-last code chunk (`{r boxplot}`) from the `.qmd` file, **modify its options** such that nthe code chunk is not evaluated
+3. Without removing the second-to-last code chunk (`{r boxplot}`) from the `.qmd` file, **modify its options** such that the code chunk is not evaluated
 4. **Render the markdown** 
 
 [Answer Key](https://raw.githubusercontent.com/hbctraining/Tools-for-reproducible-research/master/lessons/02_Quarto_intermediate_Answer_key.qmd)
@@ -77,9 +77,9 @@ ___
 
 ## Adding figures
 
-A neat feature of Quarto is how much simpler it is to generate and add figures to a report! For the most part, you don’t need to do anything special, just add a code chunk that generates a figure. When the file is rendered, the figure will automatically be produced and inserted into the final document. A single chunk can support multiple plots, and they will be appear one after the other below the chunk. 
+A neat feature of Quarto is how much simpler it is to generate and add figures to a report! For the most part, you don’t need to do anything special, just add a code chunk that generates a figure. When the file is rendered, the figure will automatically be produced and inserted into the final document. A single chunk can support multiple plots and they will be appear one after the other below the chunk. 
 
-There are a few code chunk options commonly used for plots. For example, to easily resize the figures in the final report, you can specify the `fig.height` and `fig.width` of the figure when setting up the code chunk. When these code chunk options are specificied for a given code chunk, they will override any global options that were set.
+There are a few code chunk options commonly used for plots. For example, to easily resize the figures in the final report, you can specify the `fig-height` and `fig-width` of the figure when setting up the code chunk. When these code chunk options are specificied for a given code chunk, they will override any global options that were set.
 
 ````
 ```{r}
