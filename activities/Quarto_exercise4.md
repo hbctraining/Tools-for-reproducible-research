@@ -24,4 +24,4 @@
 
 6. Upload the new Quarto file and the HTML report to the Dropbox link on the schedule page.
 
-[Answer key](https://raw.githubusercontent.com/hbctraining/Tools-for-reproducible-research/master/lessons/Answer_key_Quarto_exercise4.qmd)
+[Answer key](https://raw.githubusercontent.com/hbctraining/Tools-for-reproducible-research/master/activities/Answer_key_Quarto_exercise4.qmd)
