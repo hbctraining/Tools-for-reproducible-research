@@ -2,11 +2,11 @@
 
 1. Check if you have the `tidyverse` and `pheatmap` packages installed, if you don't please install them:
 
-```
-install.packages("tidyverse")
-install.packages("BiocManager")
-BiocManager::install("pheatmap")
-```
+    ```
+    install.packages("tidyverse")
+    install.packages("BiocManager")
+    BiocManager::install("pheatmap")
+    ```
 
 2. **Download the linked [R script](https://www.dropbox.com/scl/fi/7dexob97xeigu31owv86r/Rscript.R?rlkey=zkpnbcqekwtxndmay8ghnrlhm&st=gp353rr6&dl=1)** and save it within the `quarto_workshop` project directory.
 
