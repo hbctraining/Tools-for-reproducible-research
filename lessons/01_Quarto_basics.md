@@ -11,15 +11,15 @@ author: Michael J. Steinbaugh, Meeta Mistry, Radhika Khetani, Jihe Liu, Mary Pip
 
 ## Making your research reproducible
  
-We have already made a case about reproducibility in the introduction to this workshop. In this lesson we will focus on one of the tools to enable and empower you to perform analysis reproducibly. 
+We have already made a case about reproducibility in the introduction to this workshop. In this lesson we will focus on one of the tools to enable and empower you to perform an analysis reproducibly. 
 
-When you do lab work, you use lab notebooks to organize your methods, results, and conclusions for future retrieval and reproduction. The information in these notebooks is converted into a more concise experimental description for the Methods section when publishing the results. Computational analysis requires the same diligence! The equivalent of a lab notebook for computational work is a detailed log of the workflow used, the tools at each step, the parameters for those tools and last, but not least, the versions of the tools. 
+When you do lab work, you use lab notebooks to organize your methods, results and conclusions for future retrieval and reproduction. The information in these notebooks is converted into a more concise experimental description for the Methods section when publishing the results. Computational analysis requires the same diligence! The equivalent of a lab notebook for computational work is a detailed log of the workflow used, the tools at each step, the parameters for those tools and last, but not least, the versions of the tools. 
 
 <p align="center">
 <img src="../img/reproducibility.jpg" width="800">
 </p>
 
-*Image source: "Reproducible Research in Computational Science", Peng 2011 https://doi.org/10.1126/science.1213847*
+*Image source: ["Reproducible Research in Computational Science", Peng 2011](https://doi.org/10.1126/science.1213847)*
 
 
 ## Quarto
@@ -44,13 +44,13 @@ Ready to get started?
 
 ---
 
-### Exercise #1: Render a Quarto file to generate an HTML document
+### Exercise #1: Render a Quarto Markdown file to generate an HTML document
 
-Before we delve into the details, we will start with an activity to show you what a Quarto file (.qmd extension) looks like, and how to generate the resulting HTML report using the `quarto_render()` function (which is part of the R [quarto package](https://cran.r-project.org/web/packages/quarto/index.html)). HTML format is a common format output from rendering Quarto documents and is the default file format interpreted by web browsers. HTML is oftentimes the format that websites are written in. 
+Before we delve into the details, we will start with an activity to show you what a Quarto Markdown file (`.qmd` extension) looks like, and how to generate the resulting HTML report. HTML format is a common format output from rendering Quarto Markdown documents and is the default file format interpreted by web browsers. HTML is oftentimes the format that websites are written in. 
 
 1. Open up RStudio and **create a new project** in a new directory called `quarto_workshop`. Remember the location in computer where you create this project.
 2. **Right click [this Quarto (.qmd) file](https://www.dropbox.com/scl/fi/poag63jihksy0q9qaemt2/workshop-example.qmd?rlkey=rmenoz5xbh6ggtjse5dw0t031&st=oy8qinbk&dl=1)**. Download it (using **Save Link As**) and place it within the `quarto_workshop` project directory.
-3. **Download and uncompress [this data folder](https://www.dropbox.com/scl/fi/aopijxt8kyw8p8hppdtzm/data.zip?rlkey=qkrdf0419jjcm602di0kx6dq0&dl=1)** within the `quarto_workshop` project directory.
+3. **Download and uncompress [this data folder](https://www.dropbox.com/scl/fi/aopijxt8kyw8p8hppdtzm/data.zip?rlkey=qkrdf0419jjcm602di0kx6dq0&st=k0ez0a79&dl=1)** within the `quarto_workshop` project directory.
 4. **Open the .qmd file** in RStudio.
 5. **Render the markdown** by clicking on the `Render` button located at the top of your script editor pane.
 
@@ -63,7 +63,7 @@ In the console, you will see a flurry of text scrolling by. The text indicates p
 
 > **NOTE**: If you run into an error when rendering the markdown, make sure the directory structure of the `quarto_workshop` project is set properly as shown below:
 > - The `data` folder should be in the same directory as `workshop-example.qmd` file
-> - Two files (`counts.rpkm.csv` and `mouse_exp_design.csv`) are located inside the `data` folder
+> - The two files used in this report (`counts.rpkm.csv` and `mouse_exp_design.csv`) are located inside the `data` folder
 > <p align="center">
 > <img src="../img/Quarto_workingdir_with_label.png"
 >      width="500">
@@ -73,7 +73,7 @@ In the console, you will see a flurry of text scrolling by. The text indicates p
 
 ## Quarto basics
 
-[Markdown](https://en.wikipedia.org/wiki/Markdown) is a lightweight markup language with **plain-text-formatting syntax**. It is often used for formatting README files, writing messages in online discussion forums and creating *rich text* documents using a plain text editor. The Markdown language has been adopted by many different coding groups and some have added their own "flavors". RStudio orinignally implemented an **"R-flavored markdown"**, or **"RMarkdown"**, which has really nice features for text and code formatting. This has evolved over time and has been updated to be **"Quarto Markdown"**.
+[Markdown](https://en.wikipedia.org/wiki/Markdown) is a lightweight markup language with **plain-text-formatting syntax**. It is often used for formatting README files, writing messages in online discussion forums and creating *rich text* documents using a plain text editor. The Markdown language has been adopted by many different coding groups and some have added their own "flavors". RStudio originally implemented an **"R-flavored markdown"**, or **"RMarkdown"**, which has really nice features for text and code formatting. This has evolved over time and has been updated to be **"Quarto Markdown"**.
 
 > The [RStudio cheatsheet for Quarto](https://www.dropbox.com/scl/fi/p7om35v3sumkpac4dvh1z/quarto_cheatsheet.pdf?rlkey=em4hhjspepemwn2gxzn2p472m&dl=1) is quite daunting, but includes more advanced Quarto options that may be helpful as you become familiar with report generation.
 
@@ -114,7 +114,7 @@ Let's take a look at the syntax of how to do this in Quarto:
 
 > Note: While the header says RMarkdown, the syntax for formatting text in Quarto is that same.
 
-You can also get more information about Quarto formatting [here](https://quarto.org/docs/get-started/hello/rstudio.html)..
+You can also get more information about Quarto formatting [here](https://quarto.org/docs/get-started/hello/rstudio.html).
 
 > Fun fact! These lessons, and the schedule page were created using basic Markdown format (not R Markdown).
 > Here's an example:
@@ -135,9 +135,9 @@ library(ggplot2)
 ```
 ````
 
-Each individual code chunk should be given a **unique** label. The label goes after the `#| label: ` code block option. The label should be something meaningful and we recommend using [snake_case](https://en.wikipedia.org/wiki/Snake_case) for the names whenever possible. There are more code block options besides label that we will discuss in the next lesson.
+While not required, each individual code chunk should be given a **unique** label. The code chunk name goes after the `#| label:` code block option. The label should be something meaningful and we recommend using [snake_case](https://en.wikipedia.org/wiki/Snake_case) for the names whenever possible. There are more code block options besides label that we will discuss in the next lesson.
 
-There is a handy `Insert` button within RStudio that allows you to insert an empty R chunk in your document without having to type the backticks etc. yourself. 
+There is a handy `Insert` button within RStudio that allows you to insert an empty R chunk in your document without having to type the backticks yourself. 
 
 <p align="center">
 <img src="../img/add_code_chunk_with_label.png" width = "400">
@@ -148,7 +148,7 @@ Alternatively, there are keyboard shortcuts available as well.
 * <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>i</kbd> **for PC users**
 * <kbd>Command</kbd> + <kbd>option</kbd> + <kbd>i</kbd> **for Mac users**
 
-Finally, you can write inline R code enclosed by single backticks (\`) containing a lowercase `r`. This allows for variable returns outside of code chunks, and is extremely useful for making report text more dynamic. For example, you can print the current date inline within the report with this syntax: `` `r Sys.Date()` ``. See how we implement this in the YAML header.
+Finally, you can write inline R code enclosed by single backticks (\`) containing a lowercase `r`. This allows for variable returns outside of code chunks and is extremely useful for making report text more dynamic. For example, you can print the current date inline within the report with this syntax: `` `r Sys.Date()` ``. See how we implement this in the YAML header.
 
 For the **final code chunk in your analysis, it is recommended to run the `sessionInfo()`** function. This function will output the R version and the versions of all libraries loaded in the R environment. Documenting the versions of the tools you used is important for reproduction of your analysis in the future.
 
