@@ -67,11 +67,11 @@ ___
 1. Only some of the code chunks in the `workshop-example.qmd` file have names; go through and **add names to the unnamed code chunks**.
 2. For the code chunk named `data-ordering` do the following:
     - First, **add a new line of code** to display first few rows of the newly created `data_ordered` data frame. You may use `head()` function here.
-    - Next, **modify the options** for (`{r data-ordering}`) such that in the rendered report, the output from the new line of code will show up, but the code is hidden.
-3. Without removing the second-to-last code chunk (`{r boxplot}`) from the `.qmd` file, **modify its options** such that neither the code nor its output appear in the report
+    - Next, **modify the options** for (`data-ordering`) such that in the rendered report, the output from the new line of code will show up, but the code is hidden.
+3. Without removing the second-to-last code chunk (`{r boxplot}`) from the `.qmd` file, **modify its options** such that nthe code chunk is not evaluated
 4. **Render the markdown** 
 
-[Answer Key](https://raw.githubusercontent.com/hbctraining/Training-modules/master/Rmarkdown/data/workshop-answer-activity2.Rmd)
+[Answer Key](https://raw.githubusercontent.com/hbctraining/Tools-for-reproducible-research/master/lessons/02_Quarto_intermediate_Answer_key.qmd)
 
 ___
 
