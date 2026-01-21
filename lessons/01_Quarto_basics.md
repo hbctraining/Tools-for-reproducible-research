@@ -157,7 +157,7 @@ Once we have finished creating an Quarto Markdown file, we finally need to rende
 
 > Note: When creating your own reports, you will very likely find yourself rendering the report periodically as you work through rather than just once at the end. It is an iterative process usually since you may have to turn off warnings, or if you decide you need a figure to be larger/smaller, or updating the descriptive text in the document to be informative (for others and your future self).
 
-When you click on the "Render" button, by default an HTML report will be generated. If you would prefer a different document format, this can be specified in the YAML header with the `output:` parameter as discussed above.
+When you click on the "Render" button, by default an HTML report will be generated. If you would prefer a different document format, this can be specified in the YAML header with the `format:` parameter.
 
 ___
 
