@@ -87,7 +87,6 @@ Let's take a closer look at the "raw" `workshop-example.qmd` file and understand
 title: "Workshop Quarto example"
 author: "HBC Training Team"
 date: "`r Sys.Date()`"
-output: html_document
 ---
 ```
 
