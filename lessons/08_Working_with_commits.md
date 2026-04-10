@@ -25,9 +25,9 @@ Now stage the change, and commit with a message.
   <img src="../img/8.GHD_commit_typo.png" width="800">
 </p>
 
-Oh no! There is a typo in our commit message. Also we realized that we should have also removed the `square_it` code. Open up your `example_Rcode.R` again, and this time remove the chunk of code for `square_it` and save the file again. 
+Oh no! There is a typo in our commit message. Also, we realized that we should have also removed the `square_it` code. Open up your `example_Rcode.R` again, and this time remove the chunk of code for `square_it` and save the file again. 
 
-Now go back to your GitHub Desktop window and click history tab and right click the most recent commit, and select the "Amend commit" from the drop down menu:
+Now go back to your GitHub Desktop window, click the History tab, right click the most recent commit, and select "Amend commit" from the drop down menu:
 
 <p align="center">
   <img src="../img/8.GHD_ammend_commit_1.png" width="800" align="center">
@@ -49,7 +49,7 @@ Go ahead and decide if you would like to include the new change and fix the desc
 
 ## Undoing, Resetting, and Reverting Commits
 
-Sometimes you just want to **undo** the last thing you did. Maybe that last change you made (e.g. commit, branch, etc) was something you didn't mean to make. GitHub Desktop has a convenient `Undo` button in the lower left next to the name of the latest commit you made. You might have also noticed an `Undo Commit` option in the drop down menu when we right clicked our most recent commit from the history tab.
+Sometimes you just want to **undo** the last thing you did. Maybe that last change you made (e.g., commit, branch, etc) was something you didn't mean to make. GitHub Desktop has a convenient `Undo` button in the lower left next to the name of the latest commit you made. You might have also noticed an `Undo Commit` option in the drop down menu when we right clicked our most recent commit from the History tab.
 
 <p float="left" align="center">
   <img src="../img/8.GHD_undo_1.png" width="300" >
@@ -91,7 +91,7 @@ You may have noticed there are several other options in the dropdown menu when r
 
 **Checkout Commit** - This lets you look at the repo at the time this commit was made, in a new, `detached HEAD` (similar to a branch, which we'll cover later). This can be useful for looking at old code, but it is also a bit risky to create a `detached HEAD` because commits made here won't be able to be merged back to `main`.
 
-**View on GitHub** - This will open the changes you made in this commit on GitHub
+**View on GitHub** - This will open the changes you made in this commit on GitHub.
 
 We will discuss branches more in the next lesson, but the last two options relate to branches:
 
