@@ -6,7 +6,7 @@ author: "Meeta Mistry, Radhika Khetani, Heather Wick"
 
 ## Learning Objectives
 * Sync local and remote versions of a Git repository
-* Make changes to a git repository on GitHub (editing, adding and deleting files)
+* Make changes to a Git repository on GitHub (editing, adding and deleting files)
 * Sync local and remote versions of a Git repository
 * Access version history of a given file or repository
 
@@ -16,7 +16,7 @@ author: "Meeta Mistry, Radhika Khetani, Heather Wick"
 
 In the last lesson we were only recording our changes locally, but we may want to have these changes be available remotely as well (for collaborating/sharing/backing up). The idea is you keep your local and remote repositories "in sync".
 
-At the end of the last lesson, we took the first step to synchronizing your repository locally and remotely by publishing it to GitHub's servers, but any further changes you make locally through GitHub Desktop will remain local and not appear remotely until they are **push**ed to GitHub's servers. Any time you make local changes, you might notice the right-hand tab on the repository bar will say `Push origin`. `Origin` is the default name for your remote repository (it is possible to change the name, but that is beyond the scope of the lesson). Clicking this button will enact a one-way synchronization which will **push** your changes in your repository from your computer to GitHub, and populate the *remote* repository on GitHub's servers in the process.
+At the end of the last lesson, we took the first step to synchronizing your repository locally and remotely by publishing it to GitHub's servers, but any further changes you make locally through GitHub Desktop will remain local and not appear remotely until they are **push**ed to GitHub's servers. Any time you make local changes, you might notice the right-hand tab on the repository bar will say `Push origin`. `Origin` is the default name for your remote repository (it is possible to change the name, but that is beyond the scope of the lesson). Clicking this button will enact a one-way synchronization that will **push** your changes in your repository from your computer to GitHub and populate the *remote* repository on GitHub's servers in the process.
 
 At the end of the last lesson, we saw our repository on our *Repositories* tab on [GitHub](https://github.com/). If you click on your repository, we can now remotely view our changes on GitHub (if you don't want to navigate there by hand, in GitHub Desktop you can go to `Repository` in the menu bar, then select `View on GitHub` and it will automatically open the repository on GitHub for you: 
 
@@ -26,11 +26,11 @@ At the end of the last lesson, we saw our repository on our *Repositories* tab o
 
 Notice that our short commit descriptions are shown here, and that we can see the different commits that we performed.
 
-On GitHub, you can choose to keep repositories public or make them private; and if they are private, you can choose specific GitHub users with whom you want to share it or collaborate with.
+On GitHub, you can choose to keep repositories public or make them private; if they are private, you can choose specific GitHub users with whom you want to share or collaborate.
 
 Once your document is online, you can continue to make local changes to your file. But you will have to synchronize your local changes to reflect these changes in the published GitHub repository. Git stores changes both locally (on your computer) and remotely (on GitHub servers), and it is important to keep these changes in sync. 
 
-In GitHub Desktop and standard Git workflows, this is accomplished by regular, intentional rounds of **Pull** and **Push**, which **pulls** in changes from the remote repository, and **push**es any local changes to the remote repository.
+In GitHub Desktop and standard Git workflows, this is accomplished by regular, intentional rounds of **Pull** and **Push**, where you **pull** in changes from the remote repository and **push** any local changes to the remote repository.
 
 ## Making Changes Remotely
 
@@ -52,7 +52,7 @@ Click on the 'Edit' option or the pencil icon in the top right-hand corner of th
 # and https://www.r-bloggers.com/how-to-write-and-debug-an-r-function/
 ```
 
-2. Next, we will do a similar thing for the and the "Anscombe's quartet function". The **text you need to add is provided below**.
+2. Next, we will do a similar thing for the "Anscombe's quartet function". The **text you need to add is provided below**.
 
 ```
 # Anscombe's quartet
@@ -72,7 +72,7 @@ Once you have made some changes to your file, **click the green** <kbd><b>Commit
 
 ## Deleting files online
 
-One can also add and delete files from the repositiory online. To do this, you will first need to view the file itself (by clicking on the file's name). Once you are viewing your file you will see a trashcan icon at the top right-hand side, located to the right of the edit/pencil icon. 
+One can also add and delete files from the repositiory online. To do this, you will first need to view the file itself (by clicking on the file's name). Once you are viewing your file, you will see a trashcan icon at the top right-hand side, located to the right of the edit/pencil icon. 
 
 Let's delete one of the files in our `code` folder. Since we're working in R, we will remove the python code file. Click on the `example_python.py` file, then click the `...` button in the top right of the screen and select `Delete file`:
 
@@ -88,7 +88,7 @@ You will see the screen change, indicating that `This file was deleted`, but the
 
 ## Adding files to a repository online
 
-We can also **add files and folders to the repository via the web interface**. There are two ways to do this, by uploading existing files or create new files directly in the interface.
+We can also **add files and folders to the repository via the web interface**. There are two ways to do this, by uploading existing files or by creating new files directly in the interface.
 
 ### Uploading files
 
@@ -98,7 +98,7 @@ We'll start with adding files through upload. In your **github_desktop_workshop*
   <img src="../img/2.GHD_upload_files.png" width="800" align="center">
 </p>
   
-The file that **we would like to add to this folder** is called **"Pi Formulas -- from Wolfram MathWorld.pdf"**. The document is located in our **github_desktop_workshop_materials** folder which you downloaded and unzipped earlier. To add it to the repo using the web interface, you can do one of two things:
+The file that **we would like to add to this folder** is called **"Pi Formulas -- from Wolfram MathWorld.pdf"**. The document is located in our **github_desktop_workshop_materials** folder that you downloaded and unzipped earlier. To add it to the repo using the web interface, you can do one of two things:
 
 1. Find the file in a File Browser window on your computer and then drag and drop it on to this page.
 2. Click on the "choose your files" and find/select the file in the window that pops up. 
@@ -117,7 +117,7 @@ After committing, you will be brought back to the main page of your repository, 
 
 ## Syncing remote changes to your local repository via Pull
 
-Let's return to our local machine and apply the changes we made online to our local repo. GitHub Desktop has already noticed that our remote repo has changed, and is now prompting that you can `Pull 2 commits form the origin remote` which is highlighted in a blue box with a <kbd><b>Pull origin</b></kbd> button in blue (you can also see that the repository bar has a `Pull origin` option and tells you when the repo was most recently **fetched**.
+Let's return to our local machine and apply the changes we made online to our local repo. GitHub Desktop has already noticed that our remote repo has changed, and is now prompting that you can `Pull 2 commits form the origin remote`, which is highlighted in a blue box with a <kbd><b>Pull origin</b></kbd> button in blue (you can also see that the repository bar has a `Pull origin` option and tells you when the repo was most recently **fetched**.
 
 > Note: **fetch** and **pull** are similar concepts with some important differences. When a repo is **fetched** from remote, it will note changes to your repo but not merge/commit them to your local directory. When you **pull**, it will note these changes **and** merge/commit them to your local directory.
 
@@ -140,7 +140,7 @@ Now that we've **pull**ed our changes from GitHub, you'll also be able to see an
 
 > **NOTE**: Two important things to keep in mind when making changes on the web interface:
 > * On GitHub file changes are done serially, so commits with modifications to multiple files cannot be done here.
-> * All of these changes in the web browser are realtime on the GitHub remote, i.e. the commits take effect immediately without an intermediate **add** or **stage** step.
+> * All of these changes in the web browser are realtime on the GitHub remote, i.e., the commits take effect immediately without an intermediate **add** or **stage** step.
 
 ## Viewing File Histories
 
@@ -154,13 +154,13 @@ On the repository page of GitHub, navigate to the file whose history you would l
   <img src="../img/2.GHD_view_file_history_web.png" width="700" align="center">
 </p>
 
-You'll notice in the upper right there is a `History` button with a symbol of a clock surrounded by an arrow. You can click this to see all commits which relate to this file:
+You'll notice in the upper right there is a `History` button with a symbol of a clock surrounded by an arrow. You can click this to see all commits that relate to this file:
 
 <p align="center">
   <img src="../img/2.GHD_view_file_history_web_2.png" width="700" align="center">
 </p>
 
-You'lll notice that for each commit, there are a series of icons on the right hand side. One looks like a **document with `< >`** and the other is simply **`< >`**. Clicking these icons let you see the version of the file in that commit, or the whole repo as it looked in that commit, respectively. Let's click on the **document with `< >`** icon to see the version of `scriptlets.R` from the `Update scriptlets.R` commit. Notice that in the upper left, the button that usually says `main` now has an alphanumeric code. This code represents a snapshot of your repo at the time of this commit:
+You'lll notice that, for each commit, there are a series of icons on the right hand side. One looks like a **document with `< >`** and the other is simply **`< >`**. Clicking these icons let you see the version of the file in that commit, or the whole repo as it looked in that commit, respectively. Let's click on the **document with `< >`** icon to see the version of `scriptlets.R` from the `Update scriptlets.R` commit. Notice that in the upper left, the button that usually says `main` now has an alphanumeric code. This code represents a snapshot of your repo at the time of this commit:
 
 <p align="center">
   <img src="../img/2.GHD_view_file_history_scriptlets.png" width="800" align="center">
