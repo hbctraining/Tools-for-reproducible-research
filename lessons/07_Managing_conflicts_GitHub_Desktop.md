@@ -5,13 +5,13 @@ author: "Bob Freeman, Meeta Mistry, Radhika Khetani, Kathleen Keating, Heather W
 ---
 
 ## Learning objectives
-* Manage conflicts in git repositories
+* Manage conflicts in Git repositories
 
 ## Managing Conflicts
 
-A **conflict** emerges when you try to merge (sync) two versions of a document with changes which conflict with each other. If you are careful about committing and syncing then it is unlikely you will run into this issue; but if you do, it can be resolved fairly easily.
+A **conflict** emerges when you try to merge (sync) two versions of a document with changes that conflict with each other. If you are careful about committing and syncing, then it is unlikely you will run into this issue, but if you do, it can be resolved fairly easily.
 
-The most likely way a conflict will emerge is if you, or if you are sharing your repo with a collaborator, make a change on either the local or online repo, and then make a subsequent change on the other without first syncing the changes.
+The most likely way a conflict will emerge is if you, or the collaborator sharing your repo, make a change on either the local or online repo, and then make a subsequent change on the other without first syncing the changes.
 
 If you make changes in different parts of a file or within the repo, these changes can be merged (synced) together without any conflict. But if these changes conflict with one another – if you try and change the same line of the document in two different ways – that's when there is an issue, as Git will not know which change is the one you wish to keep.
 
@@ -24,7 +24,7 @@ An example will help illustrate the most likely way conflicts can emerge, and ho
 Let's add a change to our remote GitHub repository to main documentation `README.md` file. Let's add an attribution under the main header:
 
 ```
-Made with materials devleoped in part by the HBC training team
+Made with materials developed in part by the HBC training team
 ```
 
 <p align="center">
@@ -43,7 +43,7 @@ A hands-on workshop to demonstrate using GitHub Desktop as a GUI client to the G
  <img src="../img/7.GHD_local_change_same_file.png" width="800" align="center">
 </p>
 
-Save the changed file. Return to GitHub Desktop which should already show the change, add a description, and Commit:
+Save the changed file. Return to GitHub Desktop, which should already show the change, add a description, and Commit:
 
 <p align="center">
  <img src="../img/7.GHD_local_change_same_file_commit.png" width="800" align="center">
@@ -109,7 +109,7 @@ If you click the `History` tab and select this newest commit on the left-hand si
  <img src="../img/7.GHD_merged_option_to_push_2.png" width="800" align="center">
 </p>
 
-Now, you can synchronize your local changes with the remote repository by the standard workflow of **Pull and Push**. This can be done either by selecting **Push origin** from the repository bar up top, or by pressing the blue **Push origin** button from the `Changes` tab. Once you do this, you'll notice both of those `Push` prompts will disappear and you'll no longer have the up arrow in the `History` tab saying that the changes have not been pushed. If you go to your Github repository online, you'll now be able to see the changes to the `README.md` file there as well.
+Now, you can synchronize your local changes with the remote repository by the standard workflow of **Pull and Push**. This can be done either by selecting **Push origin** from the repository bar up top, or by pressing the blue **Push origin** button from the `Changes` tab. Once you do this, you'll notice both of those `Push` prompts will disappear and you'll no longer have the up arrow in the `History` tab saying that the changes have not been pushed. If you go to your GitHub repository online, you'll now be able to see the changes to the `README.md` file there as well.
 
 <p align="center">
  <img src="../img/7.GHD_conflict_resolved_merge.png" width="800" align="center">
@@ -117,7 +117,7 @@ Now, you can synchronize your local changes with the remote repository by the st
 
 This may seem like a convoluted approach to dealing with conflicts, but it is very useful as you have total control and the last word in dealing with conflicts. In contrast, if conflicts emerge on a system like Dropbox, the result is two files being created: Although this is better than potentially losing important changes, it also means you still have to look at these two documents and decide how you are going to merge them. 
 
-If you are careful about always syncing changes you will be able to avoid having to deal with conflicts. When collaborating, the likelihood for conflicts increases; so, it is useful to be aware of how to deal with conflicts before you begin to collaborate using GitHub. 
+If you are careful about always syncing changes, you will be able to avoid having to deal with conflicts. When collaborating, the likelihood for conflicts increases, so it is useful to be aware of how to deal with conflicts before you begin to collaborate using GitHub. 
 
 ***
 
