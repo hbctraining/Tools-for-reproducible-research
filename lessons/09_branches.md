@@ -86,7 +86,7 @@ And that's all there is to it! If you were to set your `Current Branch` to `main
 
 ### Publishing/pushing your branch to GitHub
 
-One last step: let's publish our new branch to GitHub. From the main `Changes` tab, click the **`Publish branch`** button to publish it to Remote. Be sure if your branch is `test_branch` and not `main` if you had switched it to the `main` branch inspect the `README.md`.
+One last step: let's publish our new branch to GitHub. From the main `Changes` tab, click the **`Publish branch`** button to publish it to Remote. Be sure your branch is set to `test_branch` and not `main` if you had switched it to the `main` branch to inspect the `README.md`.
 
 <p align="center">
   <img src="../img/9.GHD_publish_branch.png" width="800">
@@ -98,7 +98,7 @@ If you go to your repo on GitHub, you'll see that the branch has been published:
   <img src="../img/9.GHD_branch_on_GitHub.png" width="800">
 </p>
 
-**Note: If you already published your branch to GitHub and then make additional changes, you'll still have to Push your new changes to GitHub to sync your remote repository and create a pull request**
+**Note: If you already published your branch to GitHub and then make additional changes, you'll still have to Push your new changes to GitHub to sync your remote repository and create a pull request.**
 
 ## Merging branches
 
@@ -136,7 +136,7 @@ If you click this button, it will pull up a summary of changes, with the option 
   <img src="../img/9.GHD_preview_pull_request.png" width="800">
 </p>
 
-Clicking this will immediately open your repo on GitHub. Similar to when making a commit, you'll be prompted for a title and a description for your pull request. Go ahead and add a brief description and click the green **`Create pull request`** button
+Clicking this will immediately open your repo on GitHub. Similar to when making a commit, you'll be prompted for a title and a description for your pull request. Go ahead and add a brief description and click the green **`Create pull request`** button:
 
 <p align="center">
   <img src="../img/9.GHD_create_pull_request_github.png" width="800">
@@ -156,9 +156,9 @@ Under that is a big green button that says **`Merge pull request`**.
 >
 >**1) Create a merge commit** -- This will add all commits we made to the `test_branch` into `main`. This is useful for seeing individual changes that were made and even changing them down the road. If changes were also made in `main`, the commits will be interleaved.
 >
->**2) Squash and merge** -- This will condense, or "squash", all the commits from `test_branch` into a single commit. This is useful if you know you won't want to make any changes to individual commits after merging, or don't need the complete history from the `test_branch`
+>**2) Squash and merge** -- This will condense, or "squash", all the commits from `test_branch` into a single commit. This is useful if you know you won't want to make any changes to individual commits after merging, or don't need the complete history from the `test_branch`.
 >
->**2) Rebase and merge** -- This will add all commits from `test_branch` to the end of `main` but not create an extra commit -- this makes a somewhat cleaner history but does not indicate a merge commit
+>**2) Rebase and merge** -- This will add all commits from `test_branch` to the end of `main` but not create an extra commit -- this makes a somewhat cleaner history but does not indicate a merge commit.
 
 Go ahead and merge your branches using the default setting, clicking the green `Merge Pull Request` button.
 Then, you'll be prompted to **`Confirm merge`**:
