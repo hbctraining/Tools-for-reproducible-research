@@ -55,11 +55,11 @@ Though version control was originally designed for dealing with code for large c
 > Note: Different Version Control systems handle different *non-text files* differently. 
 > In most cases, Word documents, graphics files, data objects from R or STATA, etc., can be included, but most tools have limited capabilities for saving version information for these. 
 
-**Why Not use Dropbox or Google Drive?**
+**Why not use Dropbox or Google Drive?**
 
-Dropbox, Google Drive, and other services offer some form of version control in their systems. There are times when this may be sufficient for your needs. However there are a number of advantages to using a version control system like Git, e.g.., facilitating sharing, reproducibility, and collaborations. Benefits of collaborating with Version Control include:
+Dropbox, Google Drive and other services offer some form of version control in their systems. There are times when this may be sufficient for your needs. However there are a number of advantages to using a version control system like Git, e.g., facilitating sharing, reproducibility and collaborations. Benefits of collaborating with Version Control include:
 
-* Supports both text and programming languages, and gives the user much more control over how code is represented and disseminated
+* Supports both text and programming languages and gives the user much more control over how code is represented and disseminated
 * Allows comments on every modification, making it easier to revert to an older version
 * Allows you and others to navigate the history of a document readily
 * Ensures that changes across multiple documents are coordinated and saved together (easy conflict resolution) 
