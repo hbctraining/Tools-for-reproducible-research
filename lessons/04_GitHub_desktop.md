@@ -68,7 +68,7 @@ A few salient features of repositories are listed below:
 * The changes made within repository folders are being "watched" by Git as mentioned above, but these changes have to be deliberately added to the repository in order to be version controlled or recorded.
 * You can be control the items that Git is "watching". It is best practice to ignore very large datasets or temp files.
 
-Download the folder we have generated for this session [from here](https://github.com/hbctraining/reproducibility-tools/raw/master/data/example_files.zip), and unzip it in a location of your choosing. We recommend placing it on your Desktop for the duration of this workshop.
+Download the folder we have generated for this session [from here](https://github.com/hbctraining/reproducibility-tools/raw/master/data/example_files.zip) and unzip it in a location of your choosing. We recommend placing it on your Desktop for the duration of this workshop.
 
 ### Creating a Folder/Repository, Starting from your Local Machine
 
@@ -277,7 +277,7 @@ for (trials in 1:3000) {
 # main code
 ```
 
-Save this file as well, and go back to GitHub Desktop. You'll see that your README.md and scriptlets.R files are in the left-hand panel with the modified indicator to the right of the file: 
+Save this file as well, and go back to GitHub Desktop. You'll see that your `README.md` and `scriptlets.R` files are in the left-hand panel with the modified indicator to the right of the file: 
 
 <p align="center">
     <img src="../img/2.GHD_modified_files.png" width="800" align="center">
