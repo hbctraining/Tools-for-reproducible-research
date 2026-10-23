@@ -1,6 +1,6 @@
 # Quarto Exercise
 
-1. Check if you have the `tidyverse` and `pheatmap` packages installed, if you don't please install them:
+1. Check if you have the `tidyverse` and `pheatmap` packages installed. If you don't, please install them:
 
     ```
     install.packages("tidyverse")
@@ -12,11 +12,11 @@
 
 3. Open the Rscript file, **transform the R script into a Quarto Markdown file** by clicking `File` -> `Rename`, and rename it as `Rscript.qmd`.
 
-4. It now has the correct extension for an Quarto Markdown file, but you won't be able to knit it as is. Add the following updates to be able to knit this file:
+4. It now has the correct extension for an Quarto Markdown file, but you won't be able to render it as is. Add the following updates to be able to render this file:
     - Add a basic YAML header at the top 
     - Create an R chunk for all code underneath each `#` comment in the original R script
     - Comment on the plots (you may have to run the code from the R script to see the plots first)
-    - Add a table of contents in the YAML header by referring to these [instructions](https://quarto.org/docs/output-formats/html-basics.html#table-of-contents). YAML is fussy about indentations, make sure you are paying attention to it.
+    - Add a table of contents in the YAML header by referring to these [instructions](https://quarto.org/docs/output-formats/html-basics.html#table-of-contents). YAML is fussy about indentations, so make sure you are paying attention to the formatting.
     - (Optional) If you would like to have a button that show/hide your code in the report, you can add an additional argument in the YAML header by referring to this [instruction](https://quarto.org/docs/output-formats/html-code.html#folding-code).
     - Add a code chunk with `sessionInfo()` at the end
 
