@@ -7,7 +7,7 @@
 | 09:30 - 9:45 | [Workshop Introduction](../lectures/workshop_intro_slides.pdf) | Will |
 | 09:45 - 10:30 | [Making your data analysis reproducible](../lectures/20240806-HBC-Research-Reproducibility.pdf) | Julie Goldman |
 | 10:30 - 10:35 | Break |  |
-| 10:35 - 11:10 | [Quarto basics](../lessons/01_Quarto_basics.md) | Heather |
+| 10:35 - 11:10 | [Quarto basics](../lessons/01_Quarto_basics.md) | Elizabeth |
 | 11:10 - 11:55 | [Quarto intermediate](../lessons/02_Quarto_intermediate.md) | Will |
 | 11:55 - 12:00 | Assignment review | Will |
 
@@ -26,9 +26,9 @@
 |:------------------------:|:------------------------------------------------:|:--------:|
 | 09:30 - 10:00 | Quarto assignment review | Will |
 | 10:00 - 10:15 | [What is version control](../lessons/03_Intro_to_versioning.md) | Will |
-| 10:15 - 11:05 | [Using Git/GitHub Desktop for version control locally](../lessons/04_GitHub_desktop.md) | Heather |
+| 10:15 - 11:05 | [Using Git/GitHub Desktop for version control locally](../lessons/04_GitHub_desktop.md) | Will |
 | 11:05 - 11:10 | Break |  |
-| 11:10 - 12:00 | [Using GitHub for version control "remotely"](../lessons/05_GitHub_Dekstop_remote1.md) | Heather |
+| 11:10 - 12:00 | [Using GitHub for version control "remotely"](../lessons/05_GitHub_Dekstop_remote1.md) | Elizabeth |
 
 ### Assignment #2
 
@@ -42,11 +42,11 @@
 
 | Time            |  Topic  | Instructor |
 |:------------------------:|:------------------------------------------------:|:--------:|
-| 09:30 - 10:00 | GitHub assignment review | Will |
-| 10:00 - 10:40 | [Managing conflicts with GitHub Desktop](../lessons/07_Managing_conflicts_GitHub_Desktop.md) |Heather |
+| 09:30 - 10:00 | GitHub assignment review | Elizabeth |
+| 10:00 - 10:40 | [Managing conflicts with GitHub Desktop](../lessons/07_Managing_conflicts_GitHub_Desktop.md) | Elizabeth |
 | 10:40 - 10:45 | Break | |
-| 10:45 - 11:05 |[Working with commits](../lessons/08_Working_with_commits.md) | Heather |
-| 11:05 - 11:25 |[Using branches for collaboration and version control](../lessons/09_branches.md) | Heather |
+| 10:45 - 11:05 |[Working with commits](../lessons/08_Working_with_commits.md) | Will |
+| 11:05 - 11:25 |[Using branches for collaboration and version control](../lessons/09_branches.md) | Will |
 | 11:25 - 11:50 | Discussion Q & A | All|
 | 11:50 - 12:00 | [Wrap-up](../lectures/workshop_wrapup_slides.pdf)| Will |
 
