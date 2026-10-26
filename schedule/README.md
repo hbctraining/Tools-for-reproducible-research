@@ -5,7 +5,7 @@
 | Time            |  Topic  | Instructor |
 |:------------------------:|:------------------------------------------------:|:--------:|
 | 09:30 - 9:45 | [Workshop Introduction](../lectures/workshop_intro_slides.pdf) | Will |
-| 09:45 - 10:30 | [Making your data analysis reproducible](../lectures/20240806-HBC-Research-Reproducibility.pdf) | Julie Goldman |
+| 09:45 - 10:30 | [Making your data analysis reproducible](../lectures/20240806-HBC-Research-Reproducibility.pdf) |  |
 | 10:30 - 10:35 | Break |  |
 | 10:35 - 11:10 | [Quarto basics](../lessons/01_Quarto_basics.md) | Elizabeth |
 | 11:10 - 11:55 | [Quarto intermediate](../lessons/02_Quarto_intermediate.md) | Will |
