@@ -12,7 +12,7 @@
 | 11:55 - 12:00 | Assignment review | Will |
 
 
-<---!
+<!---
 ### Assignment #1
 [Making your data analysis reproducible](../lectures/20240806-HBC-Research-Reproducibility.pdf)
 * [Practice with Quarto](../activities/Quarto_exercise4.md)
