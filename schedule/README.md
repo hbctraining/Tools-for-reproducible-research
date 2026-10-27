@@ -5,19 +5,22 @@
 | Time            |  Topic  | Instructor |
 |:------------------------:|:------------------------------------------------:|:--------:|
 | 09:30 - 9:45 | [Workshop Introduction](../lectures/workshop_intro_slides.pdf) | Will |
-| 09:45 - 10:30 | [Making your data analysis reproducible](../lectures/20240806-HBC-Research-Reproducibility.pdf) |  |
+| 09:45 - 10:30 | [Quarto basics](../lessons/01_Quarto_basics.md) | Elizabeth |
 | 10:30 - 10:35 | Break |  |
-| 10:35 - 11:10 | [Quarto basics](../lessons/01_Quarto_basics.md) | Elizabeth |
-| 11:10 - 11:55 | [Quarto intermediate](../lessons/02_Quarto_intermediate.md) | Will |
+| 10:35 - 11:10 | [Quarto intermediate](../lessons/02_Quarto_intermediate.md) | Will |
+| 11:10 - 11:55 | [Practice with Quarto](../activities/Quarto_exercise4.md) | Will |
 | 11:55 - 12:00 | Assignment review | Will |
 
-### Assignment #1
 
+<---!
+### Assignment #1
+[Making your data analysis reproducible](../lectures/20240806-HBC-Research-Reproducibility.pdf)
 * [Practice with Quarto](../activities/Quarto_exercise4.md)
 * Upload the files requested in the above exercise to [Dropbox](https://www.dropbox.com/request/QISs4SsSuhV2d5u7mf2P) **day before the next class**.
 * [Email us](mailto:hbctraining@hsph.harvard.edu) about questions that you need answered to work through the exercise.
 * [**Answer key**](https://raw.githubusercontent.com/hbctraining/reproducibility-tools/master/activities/Answer_key_Quarto_exercise4.qmd)
-
+--->
+  
 ---
 
 ## Day 2
