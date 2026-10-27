@@ -99,7 +99,6 @@ ggplot(new_meta) +
 ```
 ````
 
-In addition to displaying it in the report, you can also have Quarto automatically write the files to a subfolder by using the code chunk option `dev`.
 
 ## Adding tables
 
