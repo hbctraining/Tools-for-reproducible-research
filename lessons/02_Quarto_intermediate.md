@@ -35,7 +35,7 @@ There is a [comprehensive list](https://quarto.org/docs/reference/formats/html.h
 
 * `#| echo: true`: whether to include R source code in the final rendered document. If `echo: false`, R source code will not be written. But the code is still evaluated and its output will be included in the final document.
 * `#| eval: true`: whether to evaluate/execute the code.
-* `#| include: true`: whether to include R source code and its output in the final document. If `include: false`, nothing (R source code and its output) will be written into the final document. But the code is still evaluated and plot files are generated if there are any plots in the chunk.
+* `#| include: true`: whether to include R source code and its output in the final document. If `include: false`, nothing (R source code and its output) will be written into the final document, but the code is still evaluated.
 * `#| warning: true`: whether to preserve warnings in the output like when we run R code in a terminal (if `warning: false`, all warnings will be printed in the console instead of the output document).
 * `#| message: true`: whether to preserve messages emitted by message() in the final output document (similar to warning).
 * `#| results: "asis"`: output as-is, i.e., write raw results from R into the output document instead of LaTeX-formatted output. Another useful option for this option is "hide", which will hide the results or all normal R output.
