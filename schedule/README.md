@@ -14,7 +14,7 @@
 
 <!---
 ### Assignment #1
-[Making your data analysis reproducible](../lectures/20240806-HBC-Research-Reproducibility.pdf)
+
 * [Practice with Quarto](../activities/Quarto_exercise4.md)
 * Upload the files requested in the above exercise to [Dropbox](https://www.dropbox.com/request/QISs4SsSuhV2d5u7mf2P) **day before the next class**.
 * [Email us](mailto:hbctraining@hsph.harvard.edu) about questions that you need answered to work through the exercise.
@@ -27,11 +27,11 @@
 
 | Time            |  Topic  | Instructor |
 |:------------------------:|:------------------------------------------------:|:--------:|
-| 09:30 - 10:00 | Quarto assignment review | Will |
-| 10:00 - 10:15 | [What is version control](../lessons/03_Intro_to_versioning.md) | Will |
-| 10:15 - 11:05 | [Using Git/GitHub Desktop for version control locally](../lessons/04_GitHub_desktop.md) | Will |
-| 11:05 - 11:10 | Break |  |
-| 11:10 - 12:00 | [Using GitHub for version control "remotely"](../lessons/05_GitHub_Dekstop_remote1.md) | Elizabeth |
+| 09:30 - 10:15 | [Making your data analysis reproducible](../lectures/20261030-HBC-Research-Reproducibility.pdf) | Julie Goldman |
+| 10:15 - 10:30 | [What is version control](../lessons/03_Intro_to_versioning.md) | Will |
+| 10:30 - 10:35 | Break |  |
+| 10:35 - 11:15 | [Using Git/GitHub Desktop for version control locally](../lessons/04_GitHub_desktop.md) | Will |
+| 11:15 - 12:00 | [Using GitHub for version control "remotely"](../lessons/05_GitHub_Dekstop_remote1.md) | Elizabeth |
 
 ### Assignment #2
 
